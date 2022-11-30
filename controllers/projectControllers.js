@@ -15,15 +15,15 @@ exports.getAllProjectsList = (req, res, next) => {
     });
 };
 
-// exports.getPythonList = (req, res, next) => {
-//   return pythonListQuery()
-//     .then((data) => {
-//       return res.status(200).send({ projectList: data });
-//     })
-//     .catch((err) => {
-//       next(err);
-//     });
-// };
+exports.getPythonList = (req, res, next) => {
+  return pythonListQuery()
+    .then((data) => {
+      return res.status(200).send({ projectList: data });
+    })
+    .catch((err) => {
+      next(err);
+    });
+};
 
 // exports.getJavascriptList = (req, res, next) => {
 //   return javascriptListQuery()

@@ -14,32 +14,32 @@ const seed = async (data) => {
   await db.query(`DROP TABLE IF EXISTS matlabProjects;`);
   await db.query(`DROP TABLE IF EXISTS allProjects;`);
 
-  const pythonTablePromise = db.query(`
-  CREATE TABLE pythonProjects (
-    project_id SERIAL PRIMARY KEY,
-    name VARCHAR,
-	image VARCHAR,
-    description VARCHAR
-  );`);
+  // const pythonTablePromise = db.query(`
+  // CREATE TABLE pythonProjects (
+  //   project_id SERIAL PRIMARY KEY,
+  //   name VARCHAR,
+  // image VARCHAR,
+  //   description VARCHAR
+  // );`);
 
-  const javascriptTablePromise = db.query(`
-  CREATE TABLE javascriptProjects (
-    project_id SERIAL PRIMARY KEY,
-    name VARCHAR,
-	image VARCHAR,
-    description VARCHAR
-  );`);
+  // const javascriptTablePromise = db.query(`
+  // CREATE TABLE javascriptProjects (
+  //   project_id SERIAL PRIMARY KEY,
+  //   name VARCHAR,
+  // image VARCHAR,
+  //   description VARCHAR
+  // );`);
 
-  const matlabTablePromise = db.query(`
-  CREATE TABLE matlabProjects (
-    project_id SERIAL PRIMARY KEY,
-    name VARCHAR,
-	image VARCHAR,
-    description VARCHAR
-  );`);
+  // const matlabTablePromise = db.query(`
+  // CREATE TABLE matlabProjects (
+  //   project_id SERIAL PRIMARY KEY,
+  //   name VARCHAR,
+  // image VARCHAR,
+  //   description VARCHAR
+  // );`);
 
   const allProjectsTablePromise = db.query(`
-  CREATE TABLE allProjects (
+  CREATE TABLE projects (
     project_id SERIAL PRIMARY KEY,
     name VARCHAR,
 	image VARCHAR,
@@ -48,53 +48,53 @@ const seed = async (data) => {
   );`);
 
   await Promise.all([
-    pythonTablePromise,
-    javascriptTablePromise,
-    matlabTablePromise,
+    // pythonTablePromise,
+    // javascriptTablePromise,
+    // matlabTablePromise,
     allProjectsTablePromise,
   ]);
 
-  const insertMatlabProjectsQueryStr = format(
-    "INSERT INTO matlabProjects (name, image, description) VALUES %L RETURNING *;",
-    matlabProjects.map(({ name, image, description }) => [
-      name,
-      image,
-      description,
-    ])
-  );
+  // const insertMatlabProjectsQueryStr = format(
+  //   "INSERT INTO matlabProjects (name, image, description) VALUES %L RETURNING *;",
+  //   matlabProjects.map(({ name, image, description }) => [
+  //     name,
+  //     image,
+  //     description,
+  //   ])
+  // );
 
-  const matlabPromise = db
-    .query(insertMatlabProjectsQueryStr)
-    .then((result) => result.rows);
+  // const matlabPromise = db
+  //   .query(insertMatlabProjectsQueryStr)
+  //   .then((result) => result.rows);
 
-  const insertJavascriptProjectsQueryStr = format(
-    "INSERT INTO javascriptProjects (name, image, description) VALUES %L RETURNING *;",
-    javascriptProjects.map(({ name, image, description }) => [
-      name,
-      image,
-      description,
-    ])
-  );
+  // const insertJavascriptProjectsQueryStr = format(
+  //   "INSERT INTO javascriptProjects (name, image, description) VALUES %L RETURNING *;",
+  //   javascriptProjects.map(({ name, image, description }) => [
+  //     name,
+  //     image,
+  //     description,
+  //   ])
+  // );
 
-  const javascriptPromise = db
-    .query(insertJavascriptProjectsQueryStr)
-    .then((result) => result.rows);
+  // const javascriptPromise = db
+  //   .query(insertJavascriptProjectsQueryStr)
+  //   .then((result) => result.rows);
 
-  const insertPythonProjectsQueryStr = format(
-    "INSERT INTO pythonProjects (name, image, description) VALUES %L RETURNING *;",
-    pythonProjects.map(({ name, image, description }) => [
-      name,
-      image,
-      description,
-    ])
-  );
+  // const insertPythonProjectsQueryStr = format(
+  //   "INSERT INTO pythonProjects (name, image, description) VALUES %L RETURNING *;",
+  //   pythonProjects.map(({ name, image, description }) => [
+  //     name,
+  //     image,
+  //     description,
+  //   ])
+  // );
 
-  const pythonPromise = db
-    .query(insertPythonProjectsQueryStr)
-    .then((result) => result.rows);
+  // const pythonPromise = db
+  //   .query(insertPythonProjectsQueryStr)
+  //   .then((result) => result.rows);
 
   const insertAllProjectsQueryStr = format(
-    "INSERT INTO allProjects (name, image, language, description) VALUES %L RETURNING *;",
+    "INSERT INTO projects (name, image, language, description) VALUES %L RETURNING *;",
     allProjects.map(({ name, image, language, description }) => [
       name,
       image,
@@ -108,9 +108,9 @@ const seed = async (data) => {
     .then((result) => result.rows);
 
   await Promise.all([
-    javascriptPromise,
-    matlabPromise,
-    pythonPromise,
+    // javascriptPromise,
+    // matlabPromise,
+    // pythonPromise,
     allPromise,
   ]);
 };
