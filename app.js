@@ -24,8 +24,6 @@ app.get("/projects/javascript", getJavascriptList);
 app.get("/projects/matlab", getMatlabList);
 app.get("/projects/MATLAB", getMatlabList);
 
-app.get("/bio", getBioInformation);
-
 app.use((req, res, next) => {
   console.log("Request method: ", req.method);
   console.log("Request url: ", req.url);

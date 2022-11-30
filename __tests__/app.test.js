@@ -68,7 +68,7 @@ describe("GET /projects", () => {
           expect(element).toHaveProperty("language", expect.any(Array));
           expect(element).toHaveProperty("otherTech", expect.any(String));
           expect(element).toHaveProperty("description", expect.any(String));
-          expect(element).toHaveProperty("approximateDate", expect.any(Date));
+          expect(element).toHaveProperty("year", expect.any(Integer));
         });
       });
   });
