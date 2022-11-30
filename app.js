@@ -4,15 +4,14 @@ const {
   getJavascriptList,
   getMatlabList,
   getAllProjectsList,
+  getJSONinstructions,
 } = require("./controllers/projectControllers");
 
 const app = express();
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.status(200).send({ msg: "get request on main API" });
-});
+app.get("/", getJSONinstructions);
 
 app.get("/projects", getAllProjectsList);
 
