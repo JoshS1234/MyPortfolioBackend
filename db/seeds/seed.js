@@ -14,7 +14,7 @@ const seed = async (data) => {
     github VARCHAR,
     hosted VARCHAR,
     language VARCHAR,
-    otherTech VARCHAR,
+    tech VARCHAR,
     description VARCHAR,
     year INTEGER 
   );`);
@@ -22,7 +22,7 @@ const seed = async (data) => {
   await Promise.all([allProjectsTablePromise]);
 
   const insertAllProjectsQueryStr = format(
-    "INSERT INTO projects (name, image_url, video_url, github, hosted, language, otherTech, description, year) VALUES %L RETURNING *;",
+    "INSERT INTO projects (name, image_url, video_url, github, hosted, language, tech, description, year) VALUES %L RETURNING *;",
     allProjects.map(
       ({
         name,
@@ -31,7 +31,7 @@ const seed = async (data) => {
         github,
         hosted,
         language,
-        otherTech,
+        tech,
         description,
         year,
       }) => [
@@ -41,7 +41,7 @@ const seed = async (data) => {
         github,
         hosted,
         language,
-        otherTech,
+        tech,
         description,
         year,
       ]

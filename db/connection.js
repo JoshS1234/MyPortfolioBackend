@@ -1,8 +1,5 @@
 const { Pool } = require("pg");
 
-console.log(process.env.NODE_ENV);
-console.log(process.env.PGDATABASE);
-
 const ENV = process.env.NODE_ENV || "test";
 
 const config =
