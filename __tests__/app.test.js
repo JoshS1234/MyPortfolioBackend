@@ -61,6 +61,46 @@ describe("GET /projects", () => {
         res.body.projects.forEach((element) => {
           expect(element).toHaveProperty("project_id", expect.any(Number));
           expect(element).toHaveProperty("name", expect.any(String));
+          expect(element).toHaveProperty("image_url", expect.any(String));
+          expect(element).toHaveProperty("video_url", expect.any(String));
+          expect(element).toHaveProperty("github", expect.any(String));
+          expect(element).toHaveProperty("hosted", expect.any(String));
+          expect(element).toHaveProperty("language", expect.any(Array));
+          expect(element).toHaveProperty("otherTech", expect.any(String));
+          expect(element).toHaveProperty("description", expect.any(String));
+          expect(element).toHaveProperty("approximateDate", expect.any(Date));
+        });
+      });
+  });
+});
+
+//Proper
+describe("GET /projects/python", () => {
+  test("returns status 200", () => {
+    return request(app).get("/projects/python").expect(200);
+  });
+  test("returns an array as the body of the response", () => {
+    return request(app)
+      .get("/projects/python")
+      .then((res) => {
+        console.log(res.body);
+        expect(res.body.projects).toBeInstanceOf(Array);
+      });
+  });
+  test("returns an array with length 4", () => {
+    return request(app)
+      .get("/projects/python")
+      .then((res) => {
+        expect(res.body.projects.length).toBe(4);
+      });
+  });
+  test("returns an array with each element being an object with id, name, image, language, description (correctly typed)", () => {
+    return request(app)
+      .get("/projects/python")
+      .then((res) => {
+        res.body.projects.forEach((element) => {
+          expect(element).toHaveProperty("project_id", expect.any(Number));
+          expect(element).toHaveProperty("name", expect.any(String));
           expect(element).toHaveProperty("image", expect.any(String));
           expect(element).toHaveProperty("language", expect.any(String));
           expect(element).toHaveProperty("description", expect.any(String));
