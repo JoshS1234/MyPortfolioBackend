@@ -1,151 +1,129 @@
 {
-  "GET /api": {
+  "GET /": {
     "description": "serves up a json representation of all the available endpoints of the api"
   },
-  "GET /api/categories": {
-    "description": "serves an array of all categories",
+  "GET /projects": {
+    "description": "serves an array of all projects. Each project is represented as an object, with properties to provide information to the user",
     "queries": [],
     "exampleResponse": {
-      "categories": [
+      "projects": [
         {
-          "description": "Players attempt to uncover each other's hidden role",
-          "slug": "Social deduction"
-        }
-      ]
-    }
-  },
-  "GET /api/users": {
-    "description": "serves an array of all users",
-    "queries": [],
-    "exampleResponse": {
-      "users": [
+        "project_id": 1,
+        "name": "NC Games - Backend",
+        "image_url": "",
+        "video_url": "",
+        "github": "",
+        "hosted": "",
+        "language": "Javascript",
+        "tech": "express",
+        "description": "This is the backend for a (mock) board games review site, it was made using express. It was made as part of the Northcoders bootcamp, during week 7 of the course",
+        "year": 2022
+        },
         {
-          "username": "tickle122",
-          "name": "Tom Tickle",
-          "avatar_url": "https://vignette.wikia.nocookie.net/mrmen/images/d/d6/Mr-Tickle-9a.png/revision/latest?cb=20180127221953"
-        }
-      ]
+          "project_id": 6,
+          "name": "Mandelbrot fractal pattern - Changing power",
+          "image_url": "",
+          "video_url": "",
+          "github": "",
+          "hosted": "",
+          "language": "MATLAB",
+          "tech": "",
+          "description": "This generates a fractal pattern based on the Mandelbrot fractal, and replots for various different indices, it then uses these images to generate a video showing how the power affects the fractal",
+          "year": 2020
+          }]
     }
   },
-  "GET /api/reviews": {
-    "description": "serves an array of all reviews",
+  "GET /projects/python": {
+    "description": "serves an array of any projects which use Python as the programming language. Each project is represented as an object, with properties to provide information to the user",
     "queries": [],
     "exampleResponse": {
-      "reviews": [
+      "projects": [
         {
-          "title": "One Night Ultimate Werewolf",
-          "designer": "Akihisa Okui",
-          "owner": "happyamy2016",
-          "review_img_url": "https://images.pexels.com/photos/5350049/pexels-photo-5350049.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          "category": "hidden-roles",
-          "created_at": 1610964101251,
-          "votes": 5
-        }
-      ]
-    }
-  },
-  "GET /api/reviews/:review_id": {
-    "description": "serves an object of a specific review (with the ID given in the URL)",
-    "queries": [],
-    "exampleResponse": {
-      "reviews": [
+        "project_id": 8,
+        "name": "Fractal pattern",
+        "image_url": "",
+        "video_url": "",
+        "github": "",
+        "hosted": "",
+        "language": "Python",
+        "tech": "",
+        "description": "This is a mathematical model which creates a fractal pattern",
+        "year": 2021
+        },
         {
-          "title": "Culture a Love of Agriculture With Agricola",
-          "designer": "Uwe Rosenberg",
-          "owner": "tickle122",
-          "review_img_url": "https://images.pexels.com/photos/4917821/pexels-photo-4917821.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          "review_body": "You could sum up Agricola with the simple phrase 'Farmyeard Fun' but the mechanics and game play add so much more than that. You'll find yourself torn between breeding pigs, or sowing crops. Its joyeous and rewarding and it makes you think of time spent outside, which is much harder to do these days!",
-          "category": "strategy",
-          "created_at": "new Date(1610964020514)",
-          "votes": "1",
-          "comment_count": "3"
-        }
-      ]
+        "project_id": 9,
+        "name": "Handwriting recognition - Neural network",
+        "image_url": "",
+        "video_url": "",
+        "github": "",
+        "hosted": "",
+        "language": "Python",
+        "tech": "",
+        "description": "This uses a neural network (trained on the MNIST dataset) in order to recognise handwritten numbers. It is coded from scratch, and doesn't use machine learning software packages.",
+        "year": 2020
+        }]
     }
   },
-
-  "Patch /api/reviews/:review_id": {
-    "description": "Allows the user to patch the review with the given ID by increasing the votes by a given number, returns the updated object",
-    "exampleRequest": "{inc_votes: 3}",
-    "queries": [
-      "Can query on any of the values in the output object (title, designer, owner, review_img_url, review_body,category, created_at, votes, comment_count",
-      "can also choose the sort order using 'sort_by=asc/desc'"
-    ],
+  "GET /projects/javascript": {
+    "description": "serves an array of any projects which use Javascript as the programming language. Each project is represented as an object, with properties to provide information to the user",
+    "queries": [],
     "exampleResponse": {
-      "reviews": [
+      "projects": [
         {
-          "title": "Culture a Love of Agriculture With Agricola",
-          "designer": "Uwe Rosenberg",
-          "owner": "tickle122",
-          "review_img_url": "https://images.pexels.com/photos/4917821/pexels-photo-4917821.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-          "review_body": "You could sum up Agricola with the simple phrase 'Farmyeard Fun'.",
-          "category": "strategy",
-          "created_at": "new Date(1610964020514)",
-          "votes": "1",
-          "comment_count": "3"
-        }
-      ]
+          "project_id": 1,
+          "name": "NC Games - Backend",
+          "image_url": "",
+          "video_url": "",
+          "github": "",
+          "hosted": "",
+          "language": "Javascript",
+          "tech": "express",
+          "description": "This is the backend for a (mock) board games review site, it was made using express. It was made as part of the Northcoders bootcamp, during week 7 of the course",
+          "year": 2022
+          },
+          {
+          "project_id": 2,
+          "name": "NC Games - Frontend",
+          "image_url": "",
+          "video_url": "",
+          "github": "",
+          "hosted": "",
+          "language": "Javascript",
+          "tech": "react",
+          "description": "This is the frontend for a (mock) board games review site, it was made using React and uses the 'NC Games - Backend' project to provide the data to populate the site. Users can also upvote and post comments",
+          "year": 2022
+          }]
     }
   },
-
-  "GET /api/reviews/:review_id/comments": {
-    "description": "serves an array with the comments relating to a specific review (with the review ID given in the URL)",
+  "GET /projects/matlab": {
+    "description": "serves an array of any projects which use MATLAB as the programming language. Each project is represented as an object, with properties to provide information to the user",
     "queries": [],
     "exampleResponse": {
-      "comments": [
+      "projects": [
         {
-          "comment_id": "4",
-          "body": "EPIC board game!",
-          "review_id": "2",
-          "author": "bainesface",
-          "votes": 16,
-          "created_at": "2017-11-22T12:36:03.389Z"
-        }
-      ]
-    }
-  },
-
-  "POST /api/reviews/:review_id/comments": {
-    "description": "Enables the user to post a comment to a specific review (with the review ID given in the URL). Returns an updated object including a votes count.",
-    "queries": [],
-    "exampleRequest": {
-      "username": "bainesface",
-      "body": "this was good fun!"
-    },
-    "exampleResponse": {
-      "comments": {
-        "username": "mallionaire",
-        "body": "This was decent, not the best not the worst",
-        "votes": "10"
-      }
-    }
-  },
-
-  "DELETE /api/comments/:comment_id": {
-    "description": "Enables the user to delete the comment with specific comment ID (given in the URL)",
-    "queries": [],
-    "exampleResponse": {}
-  },
-
-  "GET /api/owners": {
-    "description": "Outputs an array of the comment owners",
-    "queries": [],
-    "exampleResponse": {
-      "owners": ["mallionaire", "philippaclaire9", "bainesface", "dav3rid"]
-    }
-  },
-
-  "GET /api/designers": {
-    "description": "Outputs an array of the game designers",
-    "queries": [],
-    "exampleResponse": {
-      "owners": [
-        "Uwe Rosenberg",
-        "Leslie Scott",
-        "Akihisa Okui",
-        "Gamey McGameface",
-        "Seymour Buttz"
-      ]
+          "project_id": 5,
+          "name": "Vicsek model of bird flocking",
+          "image_url": "",
+          "video_url": "",
+          "github": "",
+          "hosted": "",
+          "language": "MATLAB",
+          "tech": "",
+          "description": "This attempts to simulate animal flocking patterns using a time step method and a simple set of flocking rules (outlined in a paper by Vicsek)",
+          "year": 2020
+          },
+          {
+          "project_id": 6,
+          "name": "Mandelbrot fractal pattern - Changing power",
+          "image_url": "",
+          "video_url": "",
+          "github": "",
+          "hosted": "",
+          "language": "MATLAB",
+          "tech": "",
+          "description": "This generates a fractal pattern based on the Mandelbrot fractal, and replots for various different indices, it then uses these images to generate a video showing how the power affects the fractal",
+          "year": 2020
+          }]
     }
   }
 }
