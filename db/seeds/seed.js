@@ -9,10 +9,10 @@ const {
 const seed = async (data) => {
   const { pythonProjects, javascriptProjects, matlabProjects, allProjects } =
     data;
-  await db.query(`DROP TABLE IF EXISTS pythonProjects;`);
-  await db.query(`DROP TABLE IF EXISTS javascriptProjects;`);
-  await db.query(`DROP TABLE IF EXISTS matlabProjects;`);
-  await db.query(`DROP TABLE IF EXISTS allProjects;`);
+  // await db.query(`DROP TABLE IF EXISTS pythonProjects;`);
+  // await db.query(`DROP TABLE IF EXISTS javascriptProjects;`);
+  // await db.query(`DROP TABLE IF EXISTS matlabProjects;`);
+  await db.query(`DROP TABLE IF EXISTS projects;`);
 
   // const pythonTablePromise = db.query(`
   // CREATE TABLE pythonProjects (

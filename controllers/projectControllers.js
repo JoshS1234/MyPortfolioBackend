@@ -1,7 +1,7 @@
 const {
-  // pythonListQuery,
-  // javascriptListQuery,
-  // matlabListQuery,
+  pythonListQuery,
+  javascriptListQuery,
+  matlabListQuery,
   projectListQuery,
 } = require("../models/projectModels");
 
@@ -25,22 +25,22 @@ exports.getPythonList = (req, res, next) => {
     });
 };
 
-// exports.getJavascriptList = (req, res, next) => {
-//   return javascriptListQuery()
-//     .then((data) => {
-//       return res.status(200).send({ projectList: data });
-//     })
-//     .catch((err) => {
-//       next(err);
-//     });
-// };
+exports.getJavascriptList = (req, res, next) => {
+  return javascriptListQuery()
+    .then((data) => {
+      return res.status(200).send({ projectList: data });
+    })
+    .catch((err) => {
+      next(err);
+    });
+};
 
-// exports.getMatlabList = (req, res, next) => {
-//   return matlabListQuery()
-//     .then((data) => {
-//       return res.status(200).send({ projectList: data });
-//     })
-//     .catch((err) => {
-//       next(err);
-//     });
-// };
+exports.getMatlabList = (req, res, next) => {
+  return matlabListQuery()
+    .then((data) => {
+      return res.status(200).send({ projectList: data });
+    })
+    .catch((err) => {
+      next(err);
+    });
+};

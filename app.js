@@ -1,8 +1,8 @@
 const express = require("express");
 const {
-  // getPythonList,
-  // getJavascriptList,
-  // getMatlabList,
+  getPythonList,
+  getJavascriptList,
+  getMatlabList,
   getAllProjectsList,
 } = require("./controllers/projectControllers");
 
@@ -17,11 +17,12 @@ app.get("/", (req, res) => {
 
 app.get("/projects", getAllProjectsList);
 
-// app.get("/python", getPythonList);
+app.get("/projects/python", getPythonList);
 
-// app.get("/javascript", getJavascriptList);
+app.get("/projects/javascript", getJavascriptList);
 
-// app.get("/matlab", getMatlabList);
+app.get("/projects/matlab", getMatlabList);
+app.get("/projects/MATLAB", getMatlabList);
 
 app.use((req, res, next) => {
   console.log("Request method: ", req.method);
