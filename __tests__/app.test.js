@@ -34,22 +34,37 @@ describe("GET /", () => {
   });
 });
 
-describe("GET /", () => {
+//Proper
+describe("GET /projects", () => {
   test("returns status 200", () => {
-    return request(app).get("/").expect(200);
+    return request(app).get("/projects").expect(200);
   });
-  test("returns an object as the body of the response", () => {
+  test("returns an array as the body of the response", () => {
     return request(app)
-      .get("/")
+      .get("/projects")
       .then((res) => {
-        expect(res.body).toBeInstanceOf(Object);
+        console.log(res.body);
+        expect(res.body.projects).toBeInstanceOf(Array);
       });
   });
-  test("returns a string as the body or the response", () => {
+  test("returns an array with length 4", () => {
     return request(app)
-      .get("/")
+      .get("/projects")
       .then((res) => {
-        expect(typeof res.body.msg).toBe("string");
+        expect(res.body.projects.length).toBe(4);
+      });
+  });
+  test("returns an array with each element being an object with id, name, image, language, description (correctly typed)", () => {
+    return request(app)
+      .get("/projects")
+      .then((res) => {
+        res.body.projects.forEach((element) => {
+          expect(element).toHaveProperty("project_id", expect.any(Number));
+          expect(element).toHaveProperty("name", expect.any(String));
+          expect(element).toHaveProperty("image", expect.any(String));
+          expect(element).toHaveProperty("language", expect.any(String));
+          expect(element).toHaveProperty("description", expect.any(String));
+        });
       });
   });
 });

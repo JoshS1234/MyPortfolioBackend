@@ -8,7 +8,7 @@ const {
 exports.getAllProjectsList = (req, res, next) => {
   return projectListQuery()
     .then((data) => {
-      return res.status(200).send({ projectList: data });
+      return res.status(200).send({ projects: data });
     })
     .catch((err) => {
       next(err);
@@ -18,7 +18,7 @@ exports.getAllProjectsList = (req, res, next) => {
 exports.getPythonList = (req, res, next) => {
   return pythonListQuery()
     .then((data) => {
-      return res.status(200).send({ projectList: data });
+      return res.status(200).send({ projects: data });
     })
     .catch((err) => {
       next(err);
@@ -28,7 +28,7 @@ exports.getPythonList = (req, res, next) => {
 exports.getJavascriptList = (req, res, next) => {
   return javascriptListQuery()
     .then((data) => {
-      return res.status(200).send({ projectList: data });
+      return res.status(200).send({ projects: data });
     })
     .catch((err) => {
       next(err);
@@ -38,7 +38,7 @@ exports.getJavascriptList = (req, res, next) => {
 exports.getMatlabList = (req, res, next) => {
   return matlabListQuery()
     .then((data) => {
-      return res.status(200).send({ projectList: data });
+      return res.status(200).send({ projects: data });
     })
     .catch((err) => {
       next(err);
