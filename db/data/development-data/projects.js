@@ -6,7 +6,7 @@ module.exports = [
     github: "",
     hosted: "",
     language: "Javascript",
-    otherTech: "express",
+    tech: "express",
     description:
       "This is the backend for a (mock) board games review site, it was made using express. It was made as part of the Northcoders bootcamp, during week 7 of the course",
     year: 2022,
@@ -18,7 +18,7 @@ module.exports = [
     github: "",
     hosted: "",
     language: "Javascript",
-    otherTech: "react",
+    tech: "react",
     description:
       "This is the frontend for a (mock) board games review site, it was made using React and uses the 'NC Games - Backend' project to provide the data to populate the site. Users can also upvote and post comments",
     year: 2022,
@@ -30,7 +30,7 @@ module.exports = [
     github: "",
     hosted: "",
     language: "Javascript",
-    otherTech: "react",
+    tech: "react",
     description:
       "This is a react webpage I created as a pokemon guessing game, it uses a pokemon data API (https://pokeapi.co/) to get images, and the user can filter by generation",
     year: 2022,
@@ -42,7 +42,7 @@ module.exports = [
     github: "",
     hosted: "",
     language: "Javascript",
-    otherTech: "firebase react-native",
+    tech: "firebase react-native",
     description:
       "This is a react webpage I created as a pokemon guessing game, it uses a pokemon data API (https://pokeapi.co/) to get images, and the user can filter by generation",
     year: 2022,
@@ -54,7 +54,7 @@ module.exports = [
     github: "",
     hosted: "",
     language: "MATLAB",
-    otherTech: "",
+    tech: "",
     description:
       "This attempts to simulate animal flocking patterns using a time step method and a simple set of flocking rules (outlined in a paper by Vicsek)",
     year: 2020,
@@ -66,7 +66,7 @@ module.exports = [
     github: "",
     hosted: "",
     language: "MATLAB",
-    otherTech: "",
+    tech: "",
     description:
       "This generates a fractal pattern based on the Mandelbrot fractal, and replots for various different indices, it then uses these images to generate a video showing how the power affects the fractal",
     year: 2020,
@@ -78,7 +78,7 @@ module.exports = [
     github: "",
     hosted: "",
     language: "MATLAB",
-    otherTech: "",
+    tech: "",
     description:
       "This uses Euler's method of solving differential equations to show the movement of a pendulum in 2D",
     year: 2020,
@@ -90,7 +90,7 @@ module.exports = [
     github: "",
     hosted: "",
     language: "Python",
-    otherTech: "",
+    tech: "",
     description: "This is a mathematical model which creates a fractal pattern",
     year: 2021,
   },
@@ -101,7 +101,7 @@ module.exports = [
     github: "",
     hosted: "",
     language: "Python",
-    otherTech: "",
+    tech: "",
     description:
       "This uses a neural network (trained on the MNIST dataset) in order to recognise handwritten numbers. It is coded from scratch, and doesn't use machine learning software packages.",
     year: 2020,
@@ -113,7 +113,7 @@ module.exports = [
     github: "",
     hosted: "",
     language: "Python",
-    otherTech: "",
+    tech: "",
     description:
       "This is a game of noughts and crosses in the command line. It was completed as a project during an online Python fundamentals course (over the first lockdown).",
     year: 2020,
@@ -125,7 +125,7 @@ module.exports = [
     github: "",
     hosted: "",
     language: "Python",
-    otherTech: "",
+    tech: "",
     description:
       "This was completed as a project during an online Python fundamentals course (over the first lockdown). It attempts to simulate a game of blackjack (entirely in the command line)",
     year: 2020,

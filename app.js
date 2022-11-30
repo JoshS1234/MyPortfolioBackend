@@ -22,7 +22,6 @@ app.get("/projects/python", getPythonList);
 app.get("/projects/javascript", getJavascriptList);
 
 app.get("/projects/matlab", getMatlabList);
-app.get("/projects/MATLAB", getMatlabList);
 
 app.use((req, res, next) => {
   console.log("Request method: ", req.method);

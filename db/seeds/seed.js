@@ -1,10 +1,5 @@
 const db = require("../connection");
 const format = require("pg-format");
-// const {
-//   convertTimestampToDate,
-//   createRef,
-//   formatComments,
-// } = require("./utils");
 
 const seed = async (data) => {
   const { allProjects } = data;
