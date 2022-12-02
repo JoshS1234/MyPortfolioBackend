@@ -18,11 +18,18 @@ exports.projectByIDQuery = (proj_id) => {
   return db
     .query(`SELECT * from projects WHERE project_id=$1`, [proj_id])
     .then((data) => {
-      return data.rows;
+      if (data.rows.length === 0) {
+        return Promise.reject({
+          status: 404,
+          msg: "Project with this ID doesn't exist",
+        });
+      } else {
+        return data.rows;
+      }
     })
     .catch(() => {
       return Promise.reject({
-        status: 404,
+        status: 400,
         msg: "Could not retrieve project with this ID",
       });
     });
