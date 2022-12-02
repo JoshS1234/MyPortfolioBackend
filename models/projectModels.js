@@ -14,6 +14,20 @@ exports.projectListQuery = () => {
     });
 };
 
+exports.projectByIDQuery = (proj_id) => {
+  return db
+    .query(`SELECT * from projects WHERE project_id=$1`, [proj_id])
+    .then((data) => {
+      return data.rows;
+    })
+    .catch(() => {
+      return Promise.reject({
+        status: 404,
+        msg: "Could not retrieve project with this ID",
+      });
+    });
+};
+
 exports.pythonListQuery = () => {
   return db
     .query("SELECT * from projects WHERE language='Python';")

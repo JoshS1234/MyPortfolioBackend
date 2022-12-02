@@ -5,6 +5,7 @@ const {
   getMatlabList,
   getAllProjectsList,
   getJSONinstructions,
+  getProjectWithID,
 } = require("./controllers/projectControllers");
 const cors = require("cors");
 
@@ -22,6 +23,8 @@ app.get("/projects/python", getPythonList);
 app.get("/projects/javascript", getJavascriptList);
 
 app.get("/projects/matlab", getMatlabList);
+
+app.get("/projects/:project_id", getProjectWithID);
 
 app.use((err, req, res, next) => {
   if (err.status && err.msg) {

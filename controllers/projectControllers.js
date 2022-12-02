@@ -3,11 +3,23 @@ const {
   javascriptListQuery,
   matlabListQuery,
   projectListQuery,
+  projectByIDQuery,
 } = require("../models/projectModels");
 const fs = require("fs/promises");
 
 exports.getAllProjectsList = (req, res, next) => {
   return projectListQuery()
+    .then((data) => {
+      return res.status(200).send({ projects: data });
+    })
+    .catch((err) => {
+      next(err);
+    });
+};
+
+exports.getProjectWithID = (req, res, next) => {
+  let proj_id = req.params.project_id;
+  return projectByIDQuery(proj_id)
     .then((data) => {
       return res.status(200).send({ projects: data });
     })
