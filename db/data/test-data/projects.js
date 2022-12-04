@@ -112,8 +112,9 @@ module.exports = [
     year: 2020,
   },
   {
-    name: "ASCII Tic Tac Toe (Noughts and crosses),
-    image_url: "https://drive.google.com/file/d/1-SVGPFmJXTuKcGATV95k43eWoqjbGeYO/view?usp=share_link",
+    name: "ASCII Tic Tac Toe (Noughts and crosses)",
+    image_url:
+      "https://drive.google.com/file/d/1-SVGPFmJXTuKcGATV95k43eWoqjbGeYO/view?usp=share_link",
     video_url: "",
     github: "https://github.com/JoshS1234/TicTacToeAscii",
     hosted: "",
