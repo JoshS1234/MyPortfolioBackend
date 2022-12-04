@@ -77,7 +77,7 @@ module.exports = [
     name: "2D pendulum motion",
     image_url:
       "https://drive.google.com/file/d/1sgjac9iPh3n6GuwBJGwsD0FXYFGRq_FH/view?usp=share_link",
-    video_url: "thhOujbmXdA",
+    video_url: "",
     github: "https://github.com/JoshS1234/pendulums-with-python",
     hosted: "",
     language: "MATLAB",
