@@ -1,17 +1,5 @@
 module.exports = [
   {
-    name: "NC Games - Backend",
-    image_url: "",
-    video_url: "",
-    github: "https://github.com/JoshS1234/be-nc-games",
-    hosted: "https://my-backend-server-josh.herokuapp.com/",
-    language: "Javascript",
-    tech: "Express",
-    description:
-      "This is the backend for a (mock) board games review site, it was made using express. It was made as part of the Northcoders bootcamp, during week 7 of the course",
-    year: 2022,
-  },
-  {
     name: "NC Games - Frontend",
     image_url:
       "https://drive.google.com/file/d/1qRfdbcVJPwDZkVr4o6fCJyLdHlv16E_7/view?usp=share_link",
@@ -22,6 +10,18 @@ module.exports = [
     tech: "React",
     description:
       "This is the frontend for a (mock) board games review site, it was made using React and uses the 'NC Games - Backend' project to provide the data to populate the site. Users can also upvote and post comments",
+    year: 2022,
+  },
+  {
+    name: "NC Games - Backend",
+    image_url: "",
+    video_url: "",
+    github: "https://github.com/JoshS1234/be-nc-games",
+    hosted: "https://my-backend-server-josh.herokuapp.com/",
+    language: "Javascript",
+    tech: "Express",
+    description:
+      "This is the backend for a (mock) board games review site, it was made using express. It was made as part of the Northcoders bootcamp, during week 7 of the course",
     year: 2022,
   },
   {
