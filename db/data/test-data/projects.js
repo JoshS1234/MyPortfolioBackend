@@ -46,7 +46,7 @@ module.exports = [
     language: "Javascript",
     tech: "Firebase, React-native",
     description:
-      "This is a react webpage I created as a pokemon guessing game, it uses a pokemon data API (https://pokeapi.co/) to get images, and the user can filter by generation",
+      "This is an app which I made as a group project at Northcoders. It recreates the functionality of a disposable camera by not showing the user the photo until they have completed a 'film', when they have completed the film they get all of the photos at once, in a photo album format.",
     year: 2022,
   },
   {
